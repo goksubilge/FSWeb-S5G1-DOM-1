@@ -43,3 +43,12 @@ console.log('Proje açıldı!')
 
 
 /* Kodlar Buradan aşağıya */
+
+//Header Bölümü:
+
+ document.getElementById("logo-img").src = siteContent.images["logo-img"];
+ const aLink = document.querySelectorAll("nav a");
+ aLink.forEach((item, index)=> {
+   item.className ="italic";
+   item.textContent = siteContent.nav["nav-item-" + (index+1)];
+ });
