@@ -52,3 +52,39 @@ console.log('Proje açıldı!')
    item.className ="italic";
    item.textContent = siteContent.nav["nav-item-" + (index+1)];
  });
+
+ //Section-1:
+document.querySelector("h1").textContent = siteContent.cta.h1;
+document.querySelector("button").textContent = siteContent.cta.button;
+document.getElementById("cta-img").src = siteContent.images["cta-img"];
+
+//Section-2:
+const textContentArr = document.querySelectorAll("h4");
+textContentArr[0].textContent = siteContent["ana-içerik"]["özellikler-h4"];
+textContentArr[1].textContent = siteContent["ana-içerik"]["hakkımızda-h4"];
+textContentArr[2].textContent = siteContent["ana-içerik"]["servisler-h4"];
+textContentArr[3].textContent = siteContent["ana-içerik"]["ürünler-h4"];
+textContentArr[4].textContent = siteContent["ana-içerik"]["vizyon-h4"];
+
+document.getElementById("middle-img").src = siteContent.images["accent-img"];
+
+const textContentText = document.querySelectorAll(".text-content p");
+textContentText[0].textContent = siteContent["ana-içerik"]["özellikler-içerik"];
+textContentText[1].textContent = siteContent["ana-içerik"]["hakkımızda-içerik"];
+textContentText[2].textContent = siteContent["ana-içerik"]["servisler-içeriği"];
+textContentText[3].textContent = siteContent["ana-içerik"]["ürünler-içeriği"];
+textContentText[4].textContent = siteContent["ana-içerik"]["vizyon-içeriği"];
+
+//Section-3:
+
+document.querySelector(".contact h4").textContent = siteContent.iletisim["iletişim-h4"]
+
+const iletisimP = document.querySelectorAll(".contact p")
+iletisimP[0].textContent = siteContent.iletisim.adres;
+iletisimP[1].textContent = siteContent.iletisim.telefon;
+iletisimP[2].textContent = siteContent.iletisim.email;
+
+//Footer:
+const footerDOM = document.querySelector("footer a");
+footerDOM.className = "bold";
+footerDOM.textContent = siteContent.footer.copyright;
