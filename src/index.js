@@ -44,47 +44,45 @@ console.log('Proje açıldı!')
 
 /* Kodlar Buradan aşağıya */
 
-//Header Bölümü:
+//Header Bölümüsü:
+document.getElementById("logo-img").src = siteContent.images["logo-img"];
+const navAlar = document.querySelectorAll("nav a")
+navAlar.forEach((ozellikA,sirasi) => {
+  ozellikA.className = "italic";
+  ozellikA.textContent = siteContent.nav["nav-item-"+ (sirasi+1)]
+});
 
- document.getElementById("logo-img").src = siteContent.images["logo-img"];
- const aLink = document.querySelectorAll("nav a");
- aLink.forEach((item, index)=> {
-   item.className ="italic";
-   item.textContent = siteContent.nav["nav-item-" + (index+1)];
- });
-
- //Section-1:
+//Section Bölümüsü 1
 document.querySelector("h1").textContent = siteContent.cta.h1;
 document.querySelector("button").textContent = siteContent.cta.button;
 document.getElementById("cta-img").src = siteContent.images["cta-img"];
 
-//Section-2:
-const textContentArr = document.querySelectorAll("h4");
-textContentArr[0].textContent = siteContent["ana-içerik"]["özellikler-h4"];
-textContentArr[1].textContent = siteContent["ana-içerik"]["hakkımızda-h4"];
-textContentArr[2].textContent = siteContent["ana-içerik"]["servisler-h4"];
-textContentArr[3].textContent = siteContent["ana-içerik"]["ürünler-h4"];
-textContentArr[4].textContent = siteContent["ana-içerik"]["vizyon-h4"];
+//Section Bölümüsü 2
+const h4ler = document.querySelectorAll("h4");
+h4ler[0].textContent = siteContent ["ana-içerik"] ["özellikler-h4"];
+h4ler[1].textContent = siteContent ["ana-içerik"] ["hakkımızda-h4"];
+h4ler[2].textContent = siteContent ["ana-içerik"] ["servisler-h4"];
+h4ler[3].textContent = siteContent ["ana-içerik"] ["ürünler-h4"];
+h4ler[4].textContent = siteContent ["ana-içerik"] ["vizyon-h4"];
 
+//(middle-img)
 document.getElementById("middle-img").src = siteContent.images["accent-img"];
 
-const textContentText = document.querySelectorAll(".text-content p");
-textContentText[0].textContent = siteContent["ana-içerik"]["özellikler-içerik"];
-textContentText[1].textContent = siteContent["ana-içerik"]["hakkımızda-içerik"];
-textContentText[2].textContent = siteContent["ana-içerik"]["servisler-içeriği"];
-textContentText[3].textContent = siteContent["ana-içerik"]["ürünler-içeriği"];
-textContentText[4].textContent = siteContent["ana-içerik"]["vizyon-içeriği"];
+// Section Bölümüsü 2
+const Pler = document.querySelectorAll("p");
+Pler[0].textContent = siteContent["ana-içerik"] ["özellikler-içerik"];
+Pler[1].textContent = siteContent ["ana-içerik"] ["hakkımızda-içerik"];
+Pler[2].textContent = siteContent ["ana-içerik"] ["servisler-içeriği"];
+Pler[3].textContent = siteContent ["ana-içerik"] [ "ürünler-içeriği"];
+Pler[4].textContent = siteContent ["ana-içerik"] ["vizyon-içeriği"];
 
-//Section-3:
+//Section BÖlümüsü 3 (iletişim)
+document.querySelector(".contact h4").textContent = siteContent ["iletisim"] ["iletişim-h4"];
+const Piletisim = document.querySelectorAll(".contact p");
+Piletisim[0].textContent = siteContent ["iletisim"] ["adres"];
+Piletisim[1].textContent = siteContent ["iletisim"] ["telefon"];
+Piletisim[2].textContent = siteContent ["iletisim"] ["email"];
 
-document.querySelector(".contact h4").textContent = siteContent.iletisim["iletişim-h4"]
-
-const iletisimP = document.querySelectorAll(".contact p")
-iletisimP[0].textContent = siteContent.iletisim.adres;
-iletisimP[1].textContent = siteContent.iletisim.telefon;
-iletisimP[2].textContent = siteContent.iletisim.email;
-
-//Footer:
-const footerDOM = document.querySelector("footer a");
-footerDOM.className = "bold";
-footerDOM.textContent = siteContent.footer.copyright;
+//footer Bölümüsü
+document.querySelector("footer a").className = "bold"
+document.querySelector("footer a").textContent = siteContent ["footer"] ["copyright"];
